@@ -1,0 +1,151 @@
+
+<div layout="column" class="header">
+
+
+    <md-button class="md-icon-button" aria-label="Settings" ng-click="toggleRight()" layout-align="start center">
+        <ng-md-icon icon = "menu" size="30"></ng-md-icon>
+    </md-button>
+
+    <div layout="row" layout-align="start center" layout-margin>
+        <div layout-margin>
+            <img ng-src="{{authData.facebook.profileImageURL}}" class="imgRadius img1" ng-click="showAdvanced($event)">
+        </div>
+        <div  layout="column" layout-margin>
+            <div class="fontEffects">{{authData.facebook.displayName}}</div>
+            <div class="fontEffectsChange"><b>Full Stack Developer</b></div>
+        </div>
+
+
+    </div>
+
+
+</div>
+
+<div class="buttonFixed">
+    <md-button class="md-fab buttonBackground buttonBackground" aria-label="Eat cake" ng-click="addTodo()">
+        <ng-md-icon icon = "add" class="addTask"></ng-md-icon>
+    </md-button>
+</div>
+
+<div class="taskPan" layout="row">
+
+    <div class="remainTask fontEffects" flex="50" layout="column" layout-align="center center">
+        <span>{{remainingTask}}</span>
+        <span>Remaining Tasks</span>
+    </div>
+    <div class="completedTask fontEffects" flex="50" layout="column" layout-align="center center">
+        <span>{{completedTask}}</span>
+        <span>Completed Tasks</span></div>
+
+</div>
+
+<div class="allTasks">
+    <h3>Today</h3>
+<!--
+    <div>
+        <ul ng-repeat="task in taskref">
+            <li>
+
+                <md-menu>
+                    <md-button ng-click="openMenu($mdOpenMenu, $event)">
+                        {{task.taskTitle}}
+                    </md-button>
+                    <md-menu-content width="4">
+                        <md-menu-item>
+                            <md-button ng-click="update(task)">
+                                Done
+                            </md-button>
+                        </md-menu-item>
+
+
+                        <md-menu-item>
+                            <md-button ng-click="deleteTask(task.$id)">
+                                Delete
+                            </md-button>
+                        </md-menu-item>
+
+                    </md-menu-content>
+                </md-menu>
+
+            </li>
+
+
+        </ul>
+
+
+    </div>-->
+
+
+    <md-list>
+
+        <md-list-item class="md-3-line" ng-repeat="task in taskref">
+
+            <img ng-if="$first" src="images/1.png"/>
+            <img  ng-if="$odd  && !$first && !$last"  src="images/2.png"/>
+            <img ng-if="$even  && !$first && !$last" src="images/3.png"/>
+            <img ng-if="$last && !$first" src="images/4.png"/>
+            <div class="md-list-item-text" layout="column">
+                <h3>{{task.taskTitle}}</h3>
+            </div>
+            <md-menu>
+                <md-button aria-label="Settings" ng-click="openMenu($mdOpenMenu, $event)">
+                    <ng-md-icon size="30" icon="expand_more" class="black"></ng-md-icon>
+
+                </md-button>
+                <md-menu-content width="4">
+                    <md-menu-item>
+                        <md-button ng-click="update(task)">
+                            Done
+                        </md-button>
+                    </md-menu-item>
+
+
+                    <md-menu-item>
+                        <md-button ng-click="deleteTask(task.$id)">
+                            Delete
+                        </md-button>
+                    </md-menu-item>
+
+                </md-menu-content>
+            </md-menu>
+        </md-list-item>
+
+    </md-list>
+
+
+
+
+
+
+
+</div>
+
+<div layout="column" ng-cloak>
+
+
+    <section layout="row" flex>
+
+        <md-sidenav class="md-sidenav-left sidNavHeader" md-component-id="right" layout="column">
+
+            <div layout="row" layout-align="start center" layout-margin>
+                <div layout-margin>
+                    <img ng-src="{{authData.facebook.profileImageURL}}"  class="imgRadius img1" ng-click="showAdvanced($event)">
+                </div>
+                <div  layout="column" layout-margin>
+                    <div class="fontEffects">Haider</div>
+
+                </div>
+            </div>
+
+            <div class="remainIngSidNav">
+                <img src="images/logo.png" alt="dashboardLogo">Dash Board<br />
+               <span ng-click="unOath()"> <img src="images/logout.png" alt="logoutLogo">Logout</span>
+            </div>
+
+        </md-sidenav>
+
+
+
+
+    </section>
+</div>

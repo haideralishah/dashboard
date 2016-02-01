@@ -1,0 +1,130 @@
+
+ng-md-icon{
+    fill: #ffffff;
+}
+
+ng-md-icon.addTask, ng-md-icon.black{
+    fill: #000000;
+}
+
+
+.imgRadius{
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+
+}
+
+
+.header{
+
+    background-color: #3F4996 !important
+
+
+}
+
+.fontEffects{
+    font-family: sans-serif;
+    font-size: 1.5em;
+    color: #ffffff;
+
+}
+.fontEffectsChange {
+    color: #65CCF9
+}
+/* Button CSS */
+/*
+.marginButton{
+    margin-top: 2%;
+}*/
+
+
+.buttonBackground {
+    background-color: #ffffff !important;
+}
+.buttonFixed{
+    position: absolute;
+    top: 20%;
+    left: 48%;
+}
+
+
+
+/* Button CSS */
+
+
+/*Task Pan CSS*/
+
+.taskPan{
+    text-align: center;
+    height: 20%;
+}
+
+.remainTask{
+    background-color: #4DC2FF;
+}
+.completedTask{
+    background-color: #FF7FE5;
+}
+
+
+/*Task Pan CSS*/
+/*allTasks CSS*/
+
+.allTasks{
+    color: #828689;
+    padding-left: 2%;
+    padding-top: 1%;
+}
+
+li {
+    color: #3C464F!important;
+    font-family: sans-serif;
+    font-size: 1.5em;
+    /*padding-bottom: 2em;*/
+   /* padding-left: 2em;*/
+
+
+    background: url('images/list.png') no-repeat 1% 1% transparent;
+    list-style-type: none;
+    margin: 0;
+    padding: 0 0 5% 6%;
+    vertical-align: middle;
+    
+}
+label{
+    color: #3C464F!important;
+}
+
+ul {
+/*    list-style-image: url('images/listImg.png');*/
+
+}
+
+/*allTasks CSS*/
+
+
+
+.sidNavHeader{
+    background:
+            url('bgImg.png')
+            top left no-repeat;
+    background-size: 100% 25%;
+
+    background-color: #1D224B !important;
+    height: 100%;
+
+
+
+}
+
+.remainIngSidNav{
+    margin-top: 15%;
+    margin-left: 5%;
+    color: #A6AFF1;
+
+}
+.remainIngSidNav img{
+    margin-right: 5%;
+    margin-top: 10%;
+}
